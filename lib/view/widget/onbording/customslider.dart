@@ -1,3 +1,4 @@
+import 'package:ecommerce/core/constant/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -20,13 +21,15 @@ class Customslideronbording extends GetView<Implament_onbording_controler> {
                   height: 10,
                 ),
                 Text(onbordinglist[index].title!,
-                    style: Theme.of(context).textTheme.titleLarge),
+                    style: const TextStyle(
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                        color: Appcolor.blackecolor)),
                 const SizedBox(
                   height: 60,
                 ),
                 SizedBox(
-                  width: 300,
-                  height: 300,
+                  height: Get.width / 1.2,
                   child: Image.asset(
                     onbordinglist[index].image!,
                     fit: BoxFit.cover,

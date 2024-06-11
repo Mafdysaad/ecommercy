@@ -76,6 +76,9 @@ dependencies:
   device_preview: ^1.1.0
   responsive_builder: ^0.7.0
   image_pickers: ^2.0.4+10
+  flutter_otp_text_field: ^1.1.3+2
+  country_code_text_field: ^1.1.2
+  password_strength_checker: ^1.2.3
 dependency_overrides:
   intl:
 dev_dependencies:

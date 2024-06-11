@@ -9,22 +9,17 @@ class Custombutton extends GetView<Implament_onbording_controler> {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(bottom: 60),
-      width: 200,
-      height: 40,
+      width: double.infinity,
+      height: 60,
       child: MaterialButton(
-        shape: BeveledRectangleBorder(borderRadius: BorderRadius.circular(10)),
+        shape: Theme.of(context).buttonTheme.shape,
         onPressed: () {
           controller.next();
         },
-        padding: const EdgeInsets.all(10),
         color: Colors.amber,
-        child: const Text(
-          'Continue',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 16,
-            fontWeight: FontWeight.bold,
-          ),
+        child: Text(
+          '15'.tr,
+          style: Theme.of(context).textTheme.labelLarge,
         ),
       ),
     );

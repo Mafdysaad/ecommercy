@@ -23,7 +23,10 @@ class OnBording extends StatelessWidget {
               Spacer(
                 flex: 1,
               ),
-              Custombutton(),
+              Padding(
+                padding: EdgeInsets.all(15),
+                child: Custombutton(),
+              ),
             ],
           ),
         ),

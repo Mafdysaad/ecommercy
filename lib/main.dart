@@ -2,6 +2,7 @@ import 'package:ecommerce/core/constant/binding.dart';
 import 'package:ecommerce/core/constant/colors.dart';
 import 'package:ecommerce/core/localization/changlocal.dart';
 import 'package:ecommerce/core/localization/translation.dart';
+import 'package:ecommerce/core/middleware/mymiddleware.dart';
 import 'package:ecommerce/core/services/services.dart';
 import 'package:ecommerce/routes.dart';
 import 'package:ecommerce/view/screen/languge.dart';
@@ -24,24 +25,11 @@ class MyApp extends StatelessWidget {
       translations: Mytranslation(),
       locale: lancontroller.langue,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        textTheme: const TextTheme(
-          titleLarge: TextStyle(
-              fontSize: 28,
-              fontWeight: FontWeight.bold,
-              color: Appcolor.blackecolor),
-          bodyLarge: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-              height: 2,
-              letterSpacing: 1,
-              color: Appcolor.gray),
-        ),
-        useMaterial3: true,
-      ),
+      theme: lancontroller.appthem,
       home: const Languge(),
-      routes: routes,
+      getPages: pages,
       initialBinding: Mybinding(),
+      initialRoute: '',
     );
   }
 }

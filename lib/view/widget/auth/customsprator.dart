@@ -1,27 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class Customor extends StatelessWidget {
-  const Customor({super.key});
+class Custom_OR extends StatelessWidget {
+  const Custom_OR({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(top: 20, bottom: 15),
+      padding: const EdgeInsets.only(top: 25, bottom: 15),
       child: Row(
         children: [
           const Expanded(
             flex: 2,
             child: Divider(
               color: Colors.black,
-              indent: 10,
-              endIndent: 10,
+              indent: 15,
+              endIndent: 15,
               thickness: 3,
             ),
           ),
           Text(
-            '13'.tr,
-            style: const TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+            'OR'.tr,
+            style: Theme.of(context).textTheme.bodyMedium,
           ),
           const Expanded(
             flex: 2,

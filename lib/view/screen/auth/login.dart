@@ -1,49 +1,81 @@
-import 'package:ecommerce/view/widget/login/customform.dart';
-import 'package:ecommerce/view/widget/login/customformpassword.dart';
-import 'package:ecommerce/view/widget/login/customsprator.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:ecommerce/controller/auth_controller/login_controller.dart';
+import 'package:ecommerce/core/function/validinput.dart';
+
+import 'package:ecommerce/view/widget/auth/customform.dart';
+import 'package:ecommerce/view/widget/auth/customformpassword.dart';
+import 'package:ecommerce/view/widget/auth/customlogo.dart';
+import 'package:ecommerce/view/widget/auth/customoption.dart';
+import 'package:ecommerce/view/widget/auth/customsprator.dart';
+import 'package:ecommerce/view/widget/auth/customtext.dart';
+
+import 'package:ecommerce/view/widget/auth/custonsinup.dart';
+
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:get/get.dart';
 
-import '../../widget/login/custombutton.dart';
+import '../../widget/auth/custombutton.dart';
 
-class login extends StatelessWidget {
-  const login({super.key});
-
+class Login extends GetView<Implament_login_controler> {
+  const Login({super.key});
   @override
   Widget build(BuildContext context) {
+    Implament_login_controler controller = Implament_login_controler();
     return Scaffold(
       appBar: AppBar(
-        title: Text('14'.tr),
+        title: Text('12'.tr),
         centerTitle: true,
       ),
-      body: Container(
-        width: double.infinity,
-        height: double.infinity,
-        decoration: const BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage('assets/images/back1.jpg'),
-                fit: BoxFit.cover)),
-        child: Column(
+      body: Form(
+        key: controller.formkey,
+        child: ListView(
           children: [
-            const SizedBox(
-              height: 10,
+            const Logo(
+              path: 'assets/images/logo.png',
             ),
-            const Icon(
-              Icons.lock_person_outlined,
-              size: 130,
+            customfiled(
+              title: '10'.tr,
+              hint: '34'.tr,
+              validator: (val) {
+                return validInput(val!, 30, 8, 'email');
+              },
+              texteditngcontroller: controller.email,
+              suffixicon: const Icon(
+                fill: 1,
+                Icons.email_outlined,
+                size: 28,
+              ),
             ),
-            const SizedBox(
-              height: 15,
+            custofildpass(
+              title: '39'.tr,
+              hint: '40'.tr,
+              validator: (val) {
+                return null;
+
+                //return validInput(val!, 12, 8, 'password');
+              },
+              texteditngcontroller: controller.password,
             ),
-            SizedBox(
-                height: 100, child: customfiled(title: '10'.tr, hint: '10'.tr)),
-            SizedBox(
-                height: 100,
-                child: custofildpass(title: '11'.tr, hint: '11'.tr)),
-            const Custombutton(),
-            const Customor(),
+            Customtext(
+                contant: '17'.tr,
+                function: () {
+                  controller.gotoforgetpassword();
+                }),
+            Custombutton(
+              function: () {
+                controller.savedata();
+              },
+              tiltle: '14'.tr,
+            ),
+            const Custom_OR(),
+            const Customoption(),
+            Cusomsingup(
+              textone: '18'.tr,
+              textwo: '16'.tr,
+              onTap: () {
+                controller.gotosingpage();
+              },
+            )
           ],
         ),
       ),
