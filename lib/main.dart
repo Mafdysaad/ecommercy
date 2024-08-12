@@ -1,8 +1,8 @@
 import 'package:ecommerce/core/constant/binding.dart';
-import 'package:ecommerce/core/constant/colors.dart';
+
 import 'package:ecommerce/core/localization/changlocal.dart';
 import 'package:ecommerce/core/localization/translation.dart';
-import 'package:ecommerce/core/middleware/mymiddleware.dart';
+
 import 'package:ecommerce/core/services/services.dart';
 import 'package:ecommerce/routes.dart';
 import 'package:ecommerce/view/screen/languge.dart';
@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
       theme: lancontroller.appthem,
       home: const Languge(),
       getPages: pages,
-      initialBinding: Mybinding(),
+      //initialBinding: Mybinding(),
       initialRoute: '',
     );
   }

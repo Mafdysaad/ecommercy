@@ -3,7 +3,7 @@ import 'package:ecommerce/core/constant/customoutlineInput.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class custofildpass extends GetView<Implament_login_controler> {
+class custofildpass extends StatelessWidget {
   final String title;
   final String hint;
   final String? Function(String?) validator;

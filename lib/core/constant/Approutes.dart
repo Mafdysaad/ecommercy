@@ -10,4 +10,5 @@ class Approutes {
   static const String Verify_email = '/verify';
   static const String check = '/check';
   static const String Otp_singup = '/Otp_singup';
+  static const String homepage = '/homepage';
 }

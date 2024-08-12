@@ -1,14 +1,17 @@
 import 'package:ecommerce/controller/auth_controller/singup_controller.dart';
+import 'package:ecommerce/core/constant/lottieasset.dart';
 import 'package:ecommerce/view/widget/auth/custombutton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
+import 'package:lottie/lottie.dart';
 
-class Success_singup extends GetView<implament_singup_controler> {
+class Success_singup extends StatelessWidget {
   const Success_singup({super.key});
 
   @override
   Widget build(BuildContext context) {
+    Get.put(implament_singup_controler());
     return Scaffold(
         appBar: AppBar(
           title: Text('27'.tr),
@@ -17,11 +20,11 @@ class Success_singup extends GetView<implament_singup_controler> {
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Center(
-              child: Icon(
-                Icons.check_circle_outline,
-                color: Colors.green,
-                size: 200,
+            Center(
+              child: Lottie.asset(
+                LottieAsset.done,
+                repeat: false,
+                height: 300,
               ),
             ),
             Padding(
@@ -31,7 +34,10 @@ class Success_singup extends GetView<implament_singup_controler> {
             ),
             Text('47'.tr, style: Theme.of(context).textTheme.titleMedium),
             const Spacer(),
-            Custombutton(function: controller.back_to_login, tiltle: '32'.tr),
+            GetBuilder<implament_singup_controler>(
+              builder: (controller) => Custombutton(
+                  function: controller.back_to_login, tiltle: '32'.tr),
+            ),
             const SizedBox(
               height: 30,
             )

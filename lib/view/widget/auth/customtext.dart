@@ -1,6 +1,4 @@
-import 'package:ecommerce/core/constant/Approutes.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class Customtext extends StatelessWidget {
   final String contant;

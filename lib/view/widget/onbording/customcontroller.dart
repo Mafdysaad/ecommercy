@@ -9,6 +9,7 @@ class Customdotonbording extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Get.put(Implament_onbording_controler());
     return GetBuilder<Implament_onbording_controler>(
         builder: (controller) => Row(
               mainAxisAlignment: MainAxisAlignment.center,

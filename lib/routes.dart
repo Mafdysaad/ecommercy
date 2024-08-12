@@ -5,16 +5,16 @@ import 'package:ecommerce/view/screen/auth/login.dart';
 import 'package:ecommerce/view/screen/auth/resatpassword/otp.dart';
 import 'package:ecommerce/view/screen/auth/resatpassword/resatepassword.dart';
 import 'package:ecommerce/view/screen/auth/resatpassword/Success_resatpassword.dart';
-import 'package:ecommerce/view/screen/auth/resatpassword/success_sinup.dart';
+import 'package:ecommerce/view/screen/auth/singup/success_sinup.dart';
 import 'package:ecommerce/view/screen/auth/singup/otp_singUp.dart';
 import 'package:ecommerce/view/screen/auth/singup/singup.dart';
+import 'package:ecommerce/view/screen/auth/viewlogin.dart';
 import 'package:ecommerce/view/screen/languge.dart';
+import 'package:ecommerce/view/screen/test.dart';
 
 import 'package:ecommerce/view/screen/onbording.dart';
-import 'package:flutter/material.dart';
+
 import 'package:get/get.dart';
-import 'package:http/http.dart';
-import 'package:path/path.dart';
 
 List<GetPage<dynamic>>? pages = [
   GetPage(
@@ -33,4 +33,5 @@ List<GetPage<dynamic>>? pages = [
       page: () => const Success_resatpassword()),
   GetPage(name: Approutes.Success_singup, page: () => const Success_singup()),
   GetPage(name: Approutes.Otp_singup, page: () => const Otp_singup()),
+  GetPage(name: Approutes.homepage, page: () => const Homepage()),
 ];

@@ -1,5 +1,5 @@
 import 'package:country_code_text_field/country_code_text_field.dart';
-import 'package:country_code_text_field/phone_number.dart';
+
 import 'package:ecommerce/core/constant/customoutlineInput.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -23,6 +23,7 @@ class Country_CodeText_Field extends StatelessWidget {
     return Padding(
         padding: const EdgeInsets.fromLTRB(15, 10, 15, 15),
         child: CountryCodeTextField(
+          controller: texteditngcontroller,
           bottomSheetTitle: '58'.tr,
           invalidNumberMessage: '57'.tr,
           initialCountryCode: 'EG',

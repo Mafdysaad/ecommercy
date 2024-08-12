@@ -1,5 +1,6 @@
 import 'package:ecommerce/core/constant/customoutlineInput.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class customfiled extends StatelessWidget {
   final String title;
@@ -9,20 +10,22 @@ class customfiled extends StatelessWidget {
   final Widget? suffixicon;
   final AutovalidateMode? autovalidatemode;
 
-  const customfiled(
-      {super.key,
-      required this.texteditngcontroller,
-      required this.title,
-      required this.hint,
-      required this.validator,
-      required this.suffixicon,
-      this.autovalidatemode});
+  const customfiled({
+    super.key,
+    required this.texteditngcontroller,
+    required this.title,
+    required this.hint,
+    required this.validator,
+    required this.suffixicon,
+    this.autovalidatemode,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Padding(
         padding: const EdgeInsets.fromLTRB(15, 10, 15, 15),
         child: TextFormField(
+          controller: texteditngcontroller,
           validator: validator,
           maxLines: 1,
           autofocus: false,

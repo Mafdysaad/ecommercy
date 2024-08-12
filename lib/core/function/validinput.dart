@@ -1,14 +1,11 @@
 import 'package:ecommerce/controller/auth_controller/login_controller.dart';
-import 'package:ecommerce/controller/auth_controller/resatpassword_controller.dart';
+
 import 'package:ecommerce/controller/auth_controller/singup_controller.dart';
+import 'package:ecommerce/controller/reset_password/resatpassword_controller.dart';
 import 'package:get/get.dart';
 import 'dart:isolate';
-import '../../controller/auth_controller/resatpassword_controller.dart';
 
-validInput(String value, int max, int min, String type) {
-  implament_singup_controler controller = Get.put(implament_singup_controler());
-  Implament_Resatepassword controller2 = Get.put(Implament_Resatepassword());
-
+validInput(String value, int max, int min, String type, {String? combering}) {
   if (type == 'username') {
     if (!GetUtils.isUsername(value)) {
       return '48'.tr;
@@ -44,7 +41,7 @@ validInput(String value, int max, int min, String type) {
     if (value.isEmpty) {
       return '56'.tr;
     }
-    if (value != controller.password.text) {
+    if (value != combering) {
       return '55'.tr;
     }
   }
@@ -52,7 +49,7 @@ validInput(String value, int max, int min, String type) {
     if (value.isEmpty) {
       return '56'.tr;
     }
-    if (value != controller2.password.text) {
+    if (value != combering) {
       return '55'.tr;
     }
   }

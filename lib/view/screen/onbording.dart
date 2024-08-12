@@ -1,7 +1,9 @@
+import 'package:ecommerce/controller/onbording_controller.dart';
 import 'package:ecommerce/view/widget/onbording/customslider.dart';
 import 'package:ecommerce/view/widget/onbording/customcontroller.dart';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../widget/onbording/custombottoum.dart';
 
