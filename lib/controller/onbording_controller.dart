@@ -30,7 +30,7 @@ class Implament_onbording_controler extends onbording {
     //check the user saw all the pages or not
     if (currentpage > onbordinglist.length - 1) {
       Get.offAllNamed(Approutes.login);
-      myservices.sharedpref.setString('onbording', 'done');
+      myservices.sharedpref.setString('step', '1');
     } else {
       pagecontroller.animateToPage(currentpage,
           duration: const Duration(microseconds: 900),

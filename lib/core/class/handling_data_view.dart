@@ -5,9 +5,9 @@ import 'package:flutter/widgets.dart';
 import 'package:lottie/lottie.dart';
 
 class HandlingDataRequst extends StatelessWidget {
-  final Statusrequst statusrequst;
+  late Statusrequst statusrequst;
   final Widget widget;
-  const HandlingDataRequst(
+  HandlingDataRequst(
       {super.key, required this.statusrequst, required this.widget});
 
   @override

@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -6,6 +7,7 @@ class Myservices extends GetxService {
   //iniatilize sharedpreferenc
   Future<Myservices> init() async {
     sharedpref = await SharedPreferences.getInstance();
+    await Firebase.initializeApp();
     return this;
   }
 }

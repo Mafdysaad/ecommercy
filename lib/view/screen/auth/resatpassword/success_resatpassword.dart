@@ -1,6 +1,7 @@
 import 'package:ecommerce/controller/auth_controller/login_controller.dart';
 
 import 'package:ecommerce/controller/reset_password/resatpassword_controller.dart';
+import 'package:ecommerce/core/class/handling_data_view.dart';
 import 'package:ecommerce/view/widget/auth/custombutton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -18,22 +19,24 @@ class Success_resatpassword extends StatelessWidget {
           centerTitle: true,
         ),
         body: GetBuilder<Implament_Resatepassword>(
-          builder: (controller) => Column(
-            children: [
-              const Center(
-                child: Icon(
-                  Icons.check_circle_outline,
-                  color: Colors.green,
-                  size: 200,
-                ),
-              ),
-              const Spacer(),
-              Custombutton(function: controller.backtologin, tiltle: '32'.tr),
-              const SizedBox(
-                height: 30,
-              )
-            ],
-          ),
-        ));
+            builder: (controller) => HandlingDataRequst(
+                statusrequst: controller.statusrequst,
+                widget: Column(
+                  children: [
+                    const Center(
+                      child: Icon(
+                        Icons.check_circle_outline,
+                        color: Colors.green,
+                        size: 200,
+                      ),
+                    ),
+                    const Spacer(),
+                    Custombutton(
+                        function: controller.backtologin, tiltle: '32'.tr),
+                    const SizedBox(
+                      height: 30,
+                    )
+                  ],
+                ))));
   }
 }

@@ -8,6 +8,8 @@ class Linkapi {
   static String Resetpassword = "$server_link/resetpassword/resetpassword.php";
   static String Reset_verfiycode =
       "$server_link/resetpassword/verifey_code_resetpassword.php";
+  static String homepage = "$server_link/Homepage.php";
+  static String Image_location = "http://192.168.0.106/ecommerce/";
 }
 
 /*

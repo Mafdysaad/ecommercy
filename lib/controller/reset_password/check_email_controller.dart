@@ -13,7 +13,7 @@ abstract class Check_controller extends GetxController {
 class Implament_Check_controller extends Check_controller {
   late TextEditingController email;
   GlobalKey<FormState> formkey = GlobalKey();
-  Statusrequst? statusrequst;
+  Statusrequst statusrequst = Statusrequst.none;
   checke_email checke = checke_email(Get.put(crud()));
 
   @override

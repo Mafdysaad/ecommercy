@@ -22,7 +22,7 @@ class Implament_Resatepassword extends Resatpassword_controller {
   GlobalKey<FormState> formkey = GlobalKey();
   String? email;
 
-  Statusrequst? statusrequst;
+  Statusrequst statusrequst = Statusrequst.none;
   ChangePassword checke = ChangePassword(Get.put(crud()));
 
   bool obsec = true;

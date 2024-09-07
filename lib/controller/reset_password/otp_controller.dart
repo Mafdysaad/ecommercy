@@ -9,7 +9,7 @@ import 'package:get/get.dart';
 abstract class Otp_controller extends GetxController {
   String? email;
 
-  Statusrequst? statusrequst;
+  Statusrequst statusrequst = Statusrequst.none;
   checke_otp checke = checke_otp(Get.put(crud()));
   gotoresatepassword(String otp);
 }

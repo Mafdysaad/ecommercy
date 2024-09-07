@@ -9,8 +9,12 @@ class mymiddleware extends GetMiddleware {
   int? get priority => 1;
   @override
   redirect(String? route) {
+    //to validate the user login or not
+    if (myservices.sharedpref.getString('step') == '2') {
+      return const RouteSettings(name: Approutes.homepage);
+    }
     //to validate the user see the onboarding page or not
-    if (myservices.sharedpref.getString('onbording') == 'done') {
+    if (myservices.sharedpref.getString('step') == '1') {
       return const RouteSettings(name: Approutes.login);
     }
     return null;

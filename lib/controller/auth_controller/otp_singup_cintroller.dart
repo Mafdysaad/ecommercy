@@ -10,7 +10,7 @@ import 'package:get/get.dart';
 abstract class Otp_controller extends GetxController {
   go_to_success(String verify);
   String? email;
-  Statusrequst? statusrequst;
+  Statusrequst statusrequst = Statusrequst.none;
   Otp_data verifycode = Otp_data(Get.put(crud()));
 }
 

@@ -1,6 +1,7 @@
 import 'package:ecommerce/controller/reset_password/otp_controller.dart';
 import 'package:ecommerce/controller/auth_controller/otp_singup_cintroller.dart';
 import 'package:ecommerce/controller/auth_controller/singup_controller.dart';
+import 'package:ecommerce/core/class/handling_data_view.dart';
 import 'package:ecommerce/core/class/statusrequst.dart';
 
 import 'package:ecommerce/core/constant/customoutlineInput.dart';
@@ -28,9 +29,9 @@ class Otp_singup extends StatelessWidget {
         centerTitle: true,
       ),
       body: GetBuilder<Implament_Otpsinup_controller>(
-        builder: (controller) => controller.statusrequst == Statusrequst.loading
-            ? Center(child: Lottie.asset(LottieAsset.loading))
-            : ListView(
+          builder: (controller) => HandlingDataRequst(
+              statusrequst: controller.statusrequst,
+              widget: ListView(
                 children: [
                   Custompragraph(
                     contant: '23'.tr,
@@ -49,8 +50,7 @@ class Otp_singup extends StatelessWidget {
                     onSubmit: (String value) => controller.go_to_success(value),
                   ),
                 ],
-              ),
-      ),
+              ))),
     );
   }
 }

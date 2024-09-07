@@ -8,9 +8,9 @@ import 'package:ecommerce/view/screen/auth/resatpassword/Success_resatpassword.d
 import 'package:ecommerce/view/screen/auth/singup/success_sinup.dart';
 import 'package:ecommerce/view/screen/auth/singup/otp_singUp.dart';
 import 'package:ecommerce/view/screen/auth/singup/singup.dart';
-import 'package:ecommerce/view/screen/auth/viewlogin.dart';
+import 'package:ecommerce/view/screen/homepage.dart';
+import 'package:ecommerce/view/screen/homescreen.dart';
 import 'package:ecommerce/view/screen/languge.dart';
-import 'package:ecommerce/view/screen/test.dart';
 
 import 'package:ecommerce/view/screen/onbording.dart';
 
@@ -19,9 +19,10 @@ import 'package:get/get.dart';
 List<GetPage<dynamic>>? pages = [
   GetPage(
     name: '/',
-    page: () => const Languge(),
-    middlewares: [mymiddleware()],
+    page: () => const Homescreen(),
+    // middlewares: [mymiddleware()],
   ),
+  //page: () => const Languge(),
   GetPage(name: Approutes.login, page: () => const Login()),
   GetPage(name: Approutes.onbording, page: () => const OnBording()),
   GetPage(name: Approutes.singup, page: () => const Singup()),

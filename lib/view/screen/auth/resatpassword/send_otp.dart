@@ -1,5 +1,6 @@
 import 'package:ecommerce/controller/reset_password/check_email_controller.dart';
 import 'package:ecommerce/controller/reset_password/resatpassword_controller.dart';
+import 'package:ecommerce/core/class/handling_data_view.dart';
 import 'package:ecommerce/core/function/validinput.dart';
 import 'package:ecommerce/view/widget/auth/custombutton.dart';
 import 'package:ecommerce/view/widget/auth/customform.dart';
@@ -23,32 +24,33 @@ class Send_otp extends StatelessWidget {
           centerTitle: true,
         ),
         body: GetBuilder<Implament_Check_controller>(
-          builder: (controller) => Form(
-            key: controller.formkey,
-            child: ListView(
-              children: [
-                Custompragraph(
-                  contant: '20'.tr,
-                ),
-                Customhead(
-                  contant: '38'.tr,
-                ),
-                customfiled(
-                    suffixicon: const Icon(Icons.email_outlined),
-                    title: '35'.tr,
-                    hint: '36'.tr,
-                    validator: (val) {
-                      return validInput(val!, 30, 8, 'email');
-                    },
-                    texteditngcontroller: controller.email,
-                    autovalidatemode: AutovalidateMode.onUserInteraction),
-                Custombutton(
-                  function: controller.savedata,
-                  tiltle: '21'.tr,
-                ),
-              ],
-            ),
-          ),
-        ));
+            builder: (controller) => HandlingDataRequst(
+                statusrequst: controller.statusrequst,
+                widget: Form(
+                  key: controller.formkey,
+                  child: ListView(
+                    children: [
+                      Custompragraph(
+                        contant: '20'.tr,
+                      ),
+                      Customhead(
+                        contant: '38'.tr,
+                      ),
+                      customfiled(
+                          suffixicon: const Icon(Icons.email_outlined),
+                          title: '35'.tr,
+                          hint: '36'.tr,
+                          validator: (val) {
+                            return validInput(val!, 30, 8, 'email');
+                          },
+                          texteditngcontroller: controller.email,
+                          autovalidatemode: AutovalidateMode.onUserInteraction),
+                      Custombutton(
+                        function: controller.savedata,
+                        tiltle: '21'.tr,
+                      ),
+                    ],
+                  ),
+                ))));
   }
 }

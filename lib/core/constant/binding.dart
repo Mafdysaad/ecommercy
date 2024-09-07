@@ -6,9 +6,10 @@ import 'package:ecommerce/controller/reset_password/resatpassword_controller.dar
 import 'package:ecommerce/controller/auth_controller/singup_controller.dart';
 
 import 'package:ecommerce/controller/onbording_controller.dart';
-import 'package:ecommerce/controller/test_data_controller/test_controller.dart';
+import 'package:ecommerce/controller/Home_controller/homepage_controller.dart';
 import 'package:ecommerce/core/class/crud.dart';
 import 'package:ecommerce/core/localization/changlocal.dart';
+import 'package:ecommerce/view/screen/homepage.dart';
 import 'package:get/get.dart';
 
 class Mybinding implements Bindings {
@@ -22,6 +23,6 @@ class Mybinding implements Bindings {
     Get.put(Implament_login_controler());
     Get.put(Implament_Otpsinup_controller());
     Get.put(crud());
-    Get.put(test_controller());
+    Get.put(Homepage());
   }
 }
