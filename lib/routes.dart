@@ -20,9 +20,9 @@ List<GetPage<dynamic>>? pages = [
   GetPage(
     name: '/',
     page: () => const Homescreen(),
-    // middlewares: [mymiddleware()],
+    middlewares: [mymiddleware()],
   ),
-  //page: () => const Languge(),
+  // page: () => const Languge(),
   GetPage(name: Approutes.login, page: () => const Login()),
   GetPage(name: Approutes.onbording, page: () => const OnBording()),
   GetPage(name: Approutes.singup, page: () => const Singup()),

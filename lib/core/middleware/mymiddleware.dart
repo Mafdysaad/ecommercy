@@ -17,6 +17,6 @@ class mymiddleware extends GetMiddleware {
     if (myservices.sharedpref.getString('step') == '1') {
       return const RouteSettings(name: Approutes.login);
     }
-    return null;
+    return const RouteSettings(name: Approutes.login);
   }
 }

@@ -1,9 +1,7 @@
-import 'package:ecommerce/controller/auth_controller/login_controller.dart';
 
-import 'package:ecommerce/controller/auth_controller/singup_controller.dart';
-import 'package:ecommerce/controller/reset_password/resatpassword_controller.dart';
+
 import 'package:get/get.dart';
-import 'dart:isolate';
+
 
 validInput(String value, int max, int min, String type, {String? combering}) {
   if (type == 'username') {

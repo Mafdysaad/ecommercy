@@ -1,5 +1,5 @@
 class Linkapi {
-  static String server_link = "http://192.168.0.106/ecommerce";
+  static String server_link = "https://192.168.0.106/ecommerce";
   static String Test_link = "$server_link/test.php";
   static String Sing_up = "$server_link/auth/singup.php";
   static String Verfiycode = "$server_link/auth/verifey_code.php";

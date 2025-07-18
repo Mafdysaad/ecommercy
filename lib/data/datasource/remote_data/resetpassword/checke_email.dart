@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 
 class checke_email {
   crud Curd; //object from class curd
+  //depandincy  injection
   checke_email(this.Curd); // initialize object by constructor
 
   checke(String email) async {
